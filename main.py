@@ -9,7 +9,7 @@ from tensorflow import keras
 app = FastAPI()
 
 # ✅ Load trained LSTM model
-model = keras.models.load_model("stock-backend-/model/lstm_model.h5")
+model = keras.models.load_model("model/lstm_model.h5")
 
 # ✅ Load scalers
 scaler = joblib.load("model/scaler.pkl")  # Used for input features (5 features)
