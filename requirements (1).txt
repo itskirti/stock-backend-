@@ -1,0 +1,12 @@
+tensorflow
+scikit-learn
+joblib
+gunicorn
+pydantic
+requests
+numpy
+pandas
+joblib
+tensorflow
+fastapi
+uvicorn
