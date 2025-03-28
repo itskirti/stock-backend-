@@ -9,14 +9,14 @@ from tensorflow import keras
 app = FastAPI()
 
 # ✅ Load trained LSTM model
-model = keras.models.load_model("/workspaces/stock-backend-/model/lstm_model.h5")
+model = keras.models.load_model("stock-backend-/model/lstm_model.h5")
 
 # ✅ Load scalers
-scaler = joblib.load("/workspaces/stock-backend-/model/scaler.pkl")  # Used for input features (5 features)
-scaler_close = joblib.load("/workspaces/stock-backend-/model/scaler_close.pkl")  # Used only for 'Close' price prediction
+scaler = joblib.load("model/scaler.pkl")  # Used for input features (5 features)
+scaler_close = joblib.load("model/scaler_close.pkl")  # Used only for 'Close' price prediction
 
 # ✅ Load historical stock data
-df = pd.read_csv("/workspaces/stock-backend-/model/NFLX.csv")  # Ensure this file exists in the correct path
+df = pd.read_csv("model/NFLX.csv")  # Ensure this file exists in the correct path
 
 def get_last_49_days():
     """Fetch last 49 days of stock data for prediction."""
